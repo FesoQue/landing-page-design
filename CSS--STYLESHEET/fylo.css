@@ -1,0 +1,591 @@
+/* ================================
+            reset 
+   ================================ */
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before, 
+*::after{
+    box-sizing: inherit;
+}
+
+body, p, a, ul, li{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+/*  ================================
+            variables 
+    ================================ */
+:root{
+    --intro-signup-bg: #1C2431;
+    --main-bg: #181F2A;
+    --footer-bg: #0B1523;
+    --testimonial-bg: #202A3C;
+    --cta-btn-clr1: #65E2D9;
+    --cta-btn-clr2: #339ECC;
+    --primary-clr: #fff;
+}
+
+/*  ===============================
+            base-styles 
+    =============================== */
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--main-bg);
+    color: var(--primary-clr);
+    font-weight: 400;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+.container{
+    max-width: 92%;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+}
+
+
+        /* for mobiles */
+/*  =============================
+            navigation 
+    ============================= */
+#page-nav{
+    padding: 2em 0 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+#fylo-nav-logo img{
+    width: 5.8rem;
+}
+
+#nav-list{
+    display: flex;
+    align-self: center;
+}
+
+.nav-link{
+    color: var(--primary-clr);
+    margin: 0 0.5em;
+    font-size: 0.8rem;
+}
+
+/* grid */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 25px;
+}
+
+/*  =============================
+            .intro-content
+    ============================= */
+#intro img{
+    grid-column: span 12;
+    padding: 2rem;
+    max-width: 100%;
+    justify-self: center;
+}
+
+.intro-content{
+    grid-column: span 12;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.intro-content h1{
+    font-size: 1.2rem;
+}
+
+/* button */
+.cta-btn{
+    display: inline-block;
+    color: var(--primary-clr);
+    background: none;
+    padding: 0.4em 3em;
+    background: linear-gradient(to right, #65E2D9, #339ECC);
+    border-radius: 2rem;
+    font-weight: 700;
+    margin: 1.8em 0 0;
+}
+
+/*  =============================
+           content section 
+    ============================= */
+    /* values */
+ #content-section{
+    margin-top: 6em;
+    text-align:center;
+}
+
+.values{
+    text-align: center;
+    margin: 3.2em 0;
+    grid-column: span 12;
+}
+
+/* values icons */
+.values img{
+    max-width: 100%;
+}
+
+.values-text{
+    line-height: 1.5;
+}
+
+.values h2{
+    font-size: 1.1rem;
+    margin: 1.1em 0 0.5em;
+}
+
+/*  =============================
+          mission
+    ============================= */
+#mission{
+    margin-top: 6em;
+}
+
+#mission img{
+    grid-column: 2/12;
+}
+
+#mission-statement{
+    grid-column: span 12;
+    position: relative;
+} 
+
+#mission-statement h3{
+    font-size: 1.2rem;
+}
+
+#mission-statement p{
+    margin: 0.9rem 0;
+}
+
+#mission-statement a{
+    color: var(--cta-btn-clr1);
+}
+
+#mission-statement a::after{
+    content: "";
+    display: block;
+    width: 9.3rem;
+    height: 0.2rem;
+    background-color: var(--cta-btn-clr1);
+    bottom: 0;
+    left: 0;
+    border-radius: 5px 5px 0 0;
+    margin-top: 0.4em;
+} 
+
+#icon-arrow{
+    position: relative;
+    bottom: -3px;
+    left: 4px;
+}
+
+/*  =============================
+          testimonials 
+    ============================= */
+#testimonials{
+    margin-top: 8.5em; 
+    position: relative;
+}
+
+/* background-quotes */
+#bg-quotes{
+    grid-column: 2/12;
+    position: absolute;
+    width: 33px;
+    height: 23px;
+    z-index: -111;
+    left: 0px;
+    top: -18px;
+}
+.testimonial-comments{
+    grid-column: 2/ span 10;
+    background-color: var(--testimonial-bg);
+    padding: 2em 1em;
+    font-size: 0.75rem;
+    line-height: 1.5;
+}
+
+.testimonial-comments img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+} 
+
+.profile-info{
+    font-size: 0.7rem;
+    margin-left: 0.7em;
+}
+
+.profile-info p:nth-child(1){
+    font-weight: 700;
+}
+.profile-info p:nth-child(2){
+    font-size: 0.65rem;
+}
+
+/*  =============================
+          sign-Up 
+    ============================= */
+/* this class groups the signup section
+    and the footer section together and it enables the 
+    footer to be positioned absolute to go under the signup */
+.signup-footer{
+    position: relative;
+}
+
+#signup{
+    background-color: var(--intro-signup-bg);
+    padding: 2em 1em;
+    text-align: center;
+    margin-top: 9em;
+    box-shadow: 0 2px 4px #202A3C;
+}
+
+#signup-content{
+    grid-column: 1/13;
+    line-height: 1.5;
+}
+
+#signup-content p{
+    font-size: 0.85rem;
+    margin-bottom: 1.5em;
+}
+
+.signup-btn{
+    display: inline-block;
+    color: var(--primary-clr);
+    background: none;
+    padding: 0.6em;
+    background: linear-gradient(to right, #65E2D9, #339ECC);
+    border-radius: 2rem;
+    font-weight: 700;
+    margin: 1.1em 0 0;
+    width: 250px;
+}
+
+input{
+    border-radius: 2rem;
+    width: 250px;
+    height: 40px;
+    color: #0B1523;
+    padding: 0.6em 1em;
+    border: 2px solid #202A3C;
+}
+
+/*  =============================
+          footer
+    ============================= */
+#page-footer{
+    background-color: var(--footer-bg);
+    width: 100%;
+    padding: 14em 0 3em;
+    top: -140px;
+    position: absolute;
+    z-index: -1;
+}
+#fylo-footer-logo{
+    grid-column: 1/13;
+    width: 5.7rem;
+    margin-bottom: 1em;
+}
+
+.footer-items{
+    grid-column: span 12;
+}
+
+.contact{
+    display: flex;
+}
+
+ .contact img{
+    align-self: flex-start;
+    margin-right: 0.9em;
+    width: 20px;
+}
+.contact p{
+    align-self: flex-start;
+    font-size: 0.78rem;
+} 
+
+/* footer navigations */
+.quick-links li{
+    line-height: 1.7;
+}
+.quick-links a{
+    color: #fff;
+}
+
+#footer-nav1{
+    margin: 1em 0 0.4em;
+}
+
+.sm-contact{
+    text-align: center;
+    margin-top: 1em;
+}
+
+.sm-contact a{
+    margin: 0 0.7em;
+}
+
+.sm-contact img{
+    width:  19px;
+    height: 19px;
+ }
+        /* for tablets */
+/*  =============================
+          media queries 
+    ============================= */
+@media screen and (min-width: 579px){
+    .nav-link{
+        margin: 0 1.5em;
+        font-size: 1rem;
+    }
+    
+    /* reduced the illlustrations images to adapt to tablet sizes */
+    #intro img,
+    #mission img{
+        max-width: 80%;
+        justify-self: center;
+    }
+
+    /* mission */
+    #misssion,
+    #mission-statement{
+        text-align: center;
+    }
+
+    #mission-statement a::after{
+        margin: 0.4em auto;
+    } 
+
+    /* signup */
+    .signup-btn{
+        width: 170px;
+    }
+ 
+    input{   
+        width: 300px;
+        margin-right: 0.6em;
+    }
+
+    /* footer */
+    #page-footer{
+        top: -120px;
+    }
+} 
+
+@media screen and (min-width: 650px){
+    /* intro */
+    #intro img{
+        max-width: 65%;
+        justify-self: center;
+    }
+
+    .intro-content{
+        grid-column: 2/span 10;
+        justify-self: center;
+        text-align: center;
+    }
+
+
+    /* values */
+    .values{
+        grid-column: span 6;
+        margin: 2em 1.2em;
+    }
+
+    /* values icons */
+    .values img{
+        max-width: 50%;
+        height: 75px;
+    }
+    
+    .values-text{
+        line-height: 1.5;
+    }
+
+    .values-text h2{
+        margin: 1.1em 0 0.4em;
+        font-size: 1.05rem;
+    }
+    
+    /* mission */
+    #mission img, 
+    #mission-statement{
+        grid-column: span 6;
+        margin: 0 1.2em;
+    }
+
+    #mission-statement{
+        text-align: left;
+    }
+
+    #mission-statement a::after{
+        margin-left: 0;
+    }
+
+    #icon-arrow{
+        left: -13px;
+    }
+
+    /* testimonials */
+    .testimonial-comments{
+        grid-column: span 4;
+    }
+
+    #bg-quotes{
+        grid-column: 1/2;
+        z-index: -111;
+        left: -5px;
+        top: -18px;
+    }
+
+    /* signup */
+    #signup{
+        padding: 2em 1em;
+        width: 80%;
+    }
+
+    /* footer */
+    .footer-items{
+        grid-column: span 4;
+        justify-self: start;
+        margin: 0 1.2em;
+    }
+
+     /* footer navigations */
+    #footer-nav1{
+        margin: 0 0 0.4em;
+    }
+
+    .quick-links li{
+        line-height: 2;
+        letter-spacing: 0.1rem;
+    }
+    
+    .sm-contact{
+        text-align: center;
+        margin-top: 1em;
+    }
+    
+    .sm-contact a{
+        margin: 0 1.8em 0 0;
+    }
+
+    .contact p{
+        align-self: flex-start;
+        letter-spacing: 0.1rem;
+    }  
+}
+
+@media screen and (min-width: 850px){
+    #mission-statement{
+        line-height: 2;
+    }
+
+    #intro img{
+        max-width: 55%;
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width: 1000px){
+
+    /* arrow icon */
+    #icon-arrow{
+        bottom: -4.5px;
+    }
+
+    /* page-footer  */
+    #page-footer{
+        padding: 14em 1em 6em;
+    }
+
+    .footer-items{
+        font-size: 0.7rem;
+        justify-self: center;
+        margin: 0;
+        width: 100%;
+    }
+
+    .footer-items img{
+        margin-top: 0.2em;
+    }
+
+    /* navigations */
+    .quick-links{
+        grid-column: span 2;
+    }
+    .quick-links li{
+        padding: 0 2em;
+        line-height: 2.5;
+    }
+
+    /* contacts */
+   .contact p{
+        font-size: 0.7rem;
+        line-height: 1.8;
+   }
+
+   .address{
+       grid-column: span 3;
+   }
+
+   .phone{
+        grid-column: 4/6;
+        grid-row: 2/3;
+    }
+
+   .mail{
+        grid-row: 2/3;
+        grid-column: 4/5;
+        align-self: center;
+   }
+
+   .mail img,
+   .phone img{
+       width: 18px;
+       height: 18px;
+   }
+
+   /* social media contacts */
+   .sm-contact{
+        grid-column: 10/13;
+        justify-self: center;
+   }
+
+   .sm-contact img{
+       margin: 0 0.7em;
+        width:  18px;
+        height: 18px;
+        margin-top: 0.4em;
+   }
+}
+
