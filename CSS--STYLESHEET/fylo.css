@@ -334,6 +334,10 @@ input{
     font-size: 0.78rem;
 } 
 
+.contact p a{
+    color: var(--primary-clr);
+}
+
 /* footer navigations */
 .quick-links li{
     line-height: 1.7;
