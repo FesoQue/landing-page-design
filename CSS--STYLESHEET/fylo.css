@@ -286,6 +286,7 @@ img{
     border-radius: 2rem;
     font-weight: 700;
     margin: 1.1em 0 0;
+    cursor: pointer;
     width: 250px;
 }
 
